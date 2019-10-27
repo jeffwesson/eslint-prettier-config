@@ -1,0 +1,52 @@
+{
+	"name": "@jeffwesson/eslint-prettier-config",
+	"version": "0.0.1",
+	"description": "Eslint and Prettier configuration files",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"postshrinkwrap": "chttps ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jeffwesson/eslint-prettier-config.git"
+	},
+	"keywords": [
+		"eslint",
+		"prettier",
+		"config"
+	],
+	"author": "Jeff Wesson <jeff@jeffwesson.com>",
+	"license": "MIT",
+	"homepage": "https://github.com/jeffwesson/eslint-prettier-config#readme",
+	"peerDependencies": {
+		"babel-eslint": "10.0.3",
+		"eslint": "6.6.0",
+		"eslint-config-prettier": "6.5.0",
+		"eslint-import-resolver-alias": "1.1.2",
+		"eslint-plugin-compat": "3.3.0",
+		"eslint-plugin-import": "2.18.2",
+		"eslint-plugin-no-only-tests": "2.3.1",
+		"eslint-plugin-prettier": "3.1.1",
+		"eslint-plugin-react": "7.16.0",
+		"eslint-plugin-react-hooks": "2.2.0",
+		"prettier": "1.18.2"
+	},
+	"devDependencies": {
+		"chttps": "1.0.6",
+		"husky": "3.0.9",
+		"lint-staged": "9.4.2",
+		"prettier": "1.18.2"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,json,md,prettierrc,eslintrc,babelrc}": [
+			"prettier --write",
+			"git add"
+		]
+	}
+}
